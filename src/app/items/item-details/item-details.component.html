@@ -1,0 +1,19 @@
+<div *ngIf="item">
+    <div>
+      <label>Item's name: </label> {{item.name}}
+    </div>
+    <div>
+      <label>Price: $</label>{{item.price}}
+    </div>
+    <div>
+      <label>Available: </label>{{item.available}}
+    </div>
+   
+    <span class="button is-small btn-primary" *ngIf='item.available' (click)='updateAvailable(false)'>Inactive</span>
+   
+    <span class="button is-small btn-primary" *ngIf='!item.available' (click)='updateAvailable(true)'>Active</span>
+   
+    <span class="button is-small btn-danger" (click)='deleteItem()'>Delete</span>
+   
+    <hr />
+  </div>
