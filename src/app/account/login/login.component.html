@@ -1,0 +1,55 @@
+<!-- <h4 class="card-header">Login</h4>
+<div class="card-body">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()"> 
+    <form>
+    <label for="username">Username</label>
+    <input type="text" formControlName="username" class="form-control" />
+    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+ <div *ngIf="f.username.errors.required">Username is required</div> 
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" formControlName="password" class="form-control" />
+      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+        <div *ngIf="f.password.errors.required">Password is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <button [disabled]="loading" class="btn btn-primary">
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+        Login
+      </button>
+      <a routerLink="../register" class="btn btn-link">Register</a>
+    </div>
+  </form>
+</div> -->
+<h3>User Login</h3>
+
+<!-- <body class="loginForm ">
+  <div class="loginbox mx-auto">
+    <div [hidden]="submitted" style="width: 300px;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Username</label>
+          <input type="text" class="form-control" placeholder="Enter username here" id="username" [(ngModel)]="user.name"
+            name="username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="price">Password</label>
+          <input type="password" class="form-control" placeholder="Enter password here" id="password"
+            [(ngModel)]="user.password" name="psw" required>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </form>
+    </div>
+
+    <div [hidden]="!submitted">
+      <h4>You submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newUser()">Add</button>
+    </div>
+  </div>
+</body> -->

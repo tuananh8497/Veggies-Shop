@@ -1,0 +1,12 @@
+div {
+    /* display: inline-block;
+    width: auto;
+    margin: auto;
+    text-align: center; */
+
+    width: auto;
+    padding: auto;
+    margin: auto;
+    align-content: center;
+    display: inline-block;
+}

@@ -25,6 +25,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 
 import { HttpClientModule } from '@angular/common/http';
+import { BreweriesComponent } from './breweries/breweries.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     ItemsComponent,
     ItemDetailsComponent,
     CreateItemComponent,
-    ItemsListComponent
+    ItemsListComponent,
+    BreweriesComponent
   ],
   imports: [
     BrowserModule,

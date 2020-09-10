@@ -1,0 +1,11 @@
+<h1>Breweries Test</h1>
+
+<ul *ngIf="brews">
+    <li *ngFor="let brew of brews">
+        <p class="name">{{brew.name}}</p>
+        <p class="country">{{brew.city}} - {{brew.country}}</p>
+        <p class="location">{{brew.latitude}} / {{brew.longitude}}</p>
+        <p class="updateAt">Update at: {{brew.updated_at}}</p>
+        <a href="{{ brew.website_url }}" class="site"> site </a>
+    </li>
+</ul>
