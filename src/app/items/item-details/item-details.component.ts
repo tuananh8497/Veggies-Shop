@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../item.service';
 import { Item } from '../item';
 import { Input } from '@angular/core';
+import { CartService } from 'src/app/carts/cart.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-item-details',
@@ -11,12 +13,23 @@ import { Input } from '@angular/core';
 export class ItemDetailsComponent implements OnInit {
 
   @Input() item: Item;
- 
-  constructor(private itemService: ItemService) { }
+  
+  constructor(
+    private route: ActivatedRoute,
+    private itemService: ItemService,
+    private cartService: CartService,
+    ) { }
  
   ngOnInit() {
   }
  
+  addToCart(item) {
+    item = this.item;
+    this.cartService.addToCart(item);
+    console.log("item-detals.components.ts called: " + item.name + ' added to the cart');
+    console.log(this.cartService.getCartItem());
+  }
+
   updateAvailable(isAvailable: boolean) {
     this.itemService
       .updateItem(this.item.key, { available: isAvailable })

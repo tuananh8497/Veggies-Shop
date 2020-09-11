@@ -27,7 +27,7 @@ export class ItemService {
     return this.itemsRef.doc(key).delete();
   }
  
-  getCustomersList(): AngularFirestoreCollection<Item> {
+  getItemsList(): AngularFirestoreCollection<Item> {
     return this.itemsRef;
   }
  

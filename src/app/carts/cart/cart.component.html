@@ -1,0 +1,17 @@
+<p>cart works!</p>
+
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }}</span>
+  <span>{{ item.price }}</span>
+</div>
+
+<div *ngIf="items" class="item">
+  <div>
+    <label>Item's name: </label> {{items.name}}
+  </div>
+  <div>
+    <label>Price: $</label>{{items.price}}
+  </div>
+</div>
+
+<p>this -> {{items.name}}</p>

@@ -17,7 +17,7 @@ export class ItemsListComponent implements OnInit {
   }
  
   getItemsList() {
-    this.itemService.getCustomersList().snapshotChanges().pipe(
+    this.itemService.getItemsList().snapshotChanges().pipe(
       map(changes =>
         changes.map(c =>
           ({ key: c.payload.doc.id, ...c.payload.doc.data() })

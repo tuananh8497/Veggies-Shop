@@ -9,6 +9,8 @@
       <label>Available: </label>{{item.available}}
     </div>
    
+    <button (click)="addToCart(item)">Buy</button>
+
     <span class="btn btn-secondary" *ngIf='item.available' (click)='updateAvailable(false)'>Inactive</span>
   
     <span class="btn btn-success" *ngIf='!item.available' (click)='updateAvailable(true)'>Active</span>
