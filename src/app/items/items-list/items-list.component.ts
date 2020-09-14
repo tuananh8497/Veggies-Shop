@@ -14,6 +14,7 @@ export class ItemsListComponent implements OnInit {
  
   ngOnInit() {
     this.getItemsList();
+    console.log(this.getItemsList);
   }
  
   getItemsList() {

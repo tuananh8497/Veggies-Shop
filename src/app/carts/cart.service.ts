@@ -1,7 +1,5 @@
 import { Injectable, Input } from '@angular/core';
-import { Item } from '../items/item';
 import { ItemService } from '../items/item.service';
-import { newArray } from '@angular/compiler/src/util';
 
 @Injectable({
   providedIn: 'root'

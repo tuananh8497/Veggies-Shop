@@ -1,17 +1,27 @@
 <p>cart works!</p>
+<p>this -> {{ items }}</p>
+<p>{{ items[0].name }}</p>
 
-<div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.name }}</span>
-  <span>{{ item.price }}</span>
+<!-- <ul *ngFor="let item of items">
+  <li>{{ items[item].name }}</li>
+  <li>{{ items[item].price }}</li>
+  <li>{{ items[item].available }}</li>
+</ul>
+
+<ul *ngIf="items">
+  <li>{{ items[0].name }}</li>
+  <li>{{ items[0].price }}</li>
+  <li>{{ items[0].available }}</li>
+</ul> -->
+<!-- <div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+    </div> -->
+
+<div *ngFor="let fruit of fruits" style="width: 300px;">
+  <app-cart [items]='items'></app-cart>
 </div>
 
-<div *ngIf="items" class="item">
-  <div>
-    <label>Item's name: </label> {{items.name}}
-  </div>
-  <div>
-    <label>Price: $</label>{{items.price}}
-  </div>
-</div>
-
-<p>this -> {{items.name}}</p>
+<ul *ngFor="let fruit of fruits">{{fruit}}</ul>

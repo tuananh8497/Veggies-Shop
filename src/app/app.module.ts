@@ -3,7 +3,6 @@ import { NgModule, Input } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule  } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
@@ -26,19 +25,13 @@ import { MatInputModule } from '@angular/material/input';
 
 import { HttpClientModule } from '@angular/common/http';
 import { BreweriesComponent } from './breweries/breweries.component';
+import { CommonModule } from '@angular/common';
+import { CartComponent } from './cart/cart.component';
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ItemsComponent,
-    ItemDetailsComponent,
-    CreateItemComponent,
-    ItemsListComponent,
-    BreweriesComponent
-  ],
+ 
   imports: [
-    BrowserModule,
     FormsModule,
+    BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
@@ -50,7 +43,16 @@ import { BreweriesComponent } from './breweries/breweries.component';
     MatDialogModule,
     HttpClientModule,
      ],
-  providers: [],
+     declarations: [
+      AppComponent,
+      HomeComponent,
+      ItemsComponent,
+      ItemDetailsComponent,
+      CreateItemComponent,
+      ItemsListComponent,
+      BreweriesComponent,
+      CartComponent,
+    ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
