@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Input } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule  } from '@angular/fire/firestore';
@@ -18,41 +18,37 @@ import { ItemsListComponent } from './items/items-list/items-list.component';
 
 // angular material module
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatInputModule } from '@angular/material/input';
-
+// import { MatSliderModule } from '@angular/material/slider';
+// import { MatButtonModule } from '@angular/material/button';
+// import { MatDialogModule } from '@angular/material/dialog';
+// import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { BreweriesComponent } from './breweries/breweries.component';
-import { CommonModule } from '@angular/common';
-import { CartComponent } from './cart/cart.component';
+import { CommonModule } from '@angular/common'; 
+import { CartComponent } from './carts/cart/cart.component';
+import { ShippingComponent } from './shipping/shipping.component';
+
 @NgModule({
- 
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ItemsComponent,
+    CartComponent,
+    ItemDetailsComponent,
+    CreateItemComponent,
+    ItemsListComponent,
+    BreweriesComponent,
+    ShippingComponent
+  ],
   imports: [
     FormsModule,
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatInputModule,
-    MatSliderModule,
-    MatDialogModule,
     HttpClientModule,
      ],
-     declarations: [
-      AppComponent,
-      HomeComponent,
-      ItemsComponent,
-      ItemDetailsComponent,
-      CreateItemComponent,
-      ItemsListComponent,
-      BreweriesComponent,
-      CartComponent,
-    ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

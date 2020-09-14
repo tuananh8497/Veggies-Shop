@@ -1,27 +1,30 @@
-<p>cart works!</p>
-<p>this -> {{ items }}</p>
-<p>{{ items[0].name }}</p>
+<h1>Cart</h1>
 
-<!-- <ul *ngFor="let item of items">
-  <li>{{ items[item].name }}</li>
-  <li>{{ items[item].price }}</li>
-  <li>{{ items[item].available }}</li>
-</ul>
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
 
-<ul *ngIf="items">
-  <li>{{ items[0].name }}</li>
-  <li>{{ items[0].price }}</li>
-  <li>{{ items[0].available }}</li>
-</ul> -->
-<!-- <div>
-      <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1>
-    </div> -->
-
-<div *ngFor="let fruit of fruits" style="width: 300px;">
-  <app-cart [items]='items'></app-cart>
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }} </span>
+  <span>{{ item.price | currency }}</span>
 </div>
 
-<ul *ngFor="let fruit of fruits">{{fruit}}</ul>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+
+  <div>
+    <label for="address">
+      Address
+    </label>
+    <input id="address" type="text" formControlName="address">
+  </div>
+
+  <button class="button" type="submit">Purchase</button>
+
+</form>

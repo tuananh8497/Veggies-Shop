@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CartsRoutingModule} from './carts-routing.module';
 import { CommonModule } from '@angular/common';
-import { ItemRoutingModule } from '../items/item-routing.module';
-import { ItemService } from '../items/item.service';
+import { CartService } from './cart.service';
+import { CartsRoutingModule} from './carts-routing.module';
+import { CartComponent } from './cart/cart.component';
+
 
 @NgModule({
   declarations: [],
@@ -10,7 +11,6 @@ import { ItemService } from '../items/item.service';
     CommonModule,
     CartsRoutingModule,
   ],
-  // providers: [CartService],
-  providers: [ItemService]
+  providers: [CartService],
 })
 export class CartsModule { }
